@@ -2,17 +2,32 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:clipChildren="false"
     android:background="@android:color/black"
     android:id="@+id/frame_layout">
 
     <android.support.v4.view.ViewPager
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="450dp"
         android:layout_gravity="center"
         android:id="@+id/gallery"
         android:clipChildren="false"
         android:layout_marginLeft="85dp"
         android:layout_marginRight="85dp" />
+
+        <com.lwj.widget.viewpagerindicator.ViewPagerIndicator
+            android:id="@+id/indicator_circle_line"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="bottom"
+            android:background="#efefef"
+            app:vpi_default_color="#FF239AF5"
+            app:vpi_distance="60dp"
+            app:vpi_distanceType="BY_LAYOUT"
+            app:vpi_indicatorType="CIRCLE_LINE"
+            app:vpi_radius="10dp"
+            app:vpi_selected_color="#FF239AF5"
+            />
 
 </FrameLayout>

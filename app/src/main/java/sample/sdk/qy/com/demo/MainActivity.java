@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
+import com.lwj.widget.viewpagerindicator.ViewPagerIndicator;
+
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +20,7 @@ public class MainActivity extends Activity {
     private List<View> pages;
     private FrameLayout layout;
     private ViewPager pager;
+    private ViewPagerIndicator mIndicatorCircleLine;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,6 +42,9 @@ public class MainActivity extends Activity {
                 return pager.dispatchTouchEvent(event);
             }
         });
+
+        mIndicatorCircleLine = (ViewPagerIndicator) findViewById(R.id.indicator_circle_line);
+        mIndicatorCircleLine.setViewPager(pager,9);
     }
 
     private List<View> getPages() {
